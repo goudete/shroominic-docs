@@ -10,7 +10,7 @@ export default function Welcome() {
             NUX
           </div>
           <div className="text-[#94949c]">
-            NUX empowers non-technical users to easily run, test, version, and deploy "stages" of multimodal models in a sequential chain.
+            NUX empowers non-technical users to easily run, test, version, and deploy &quot;stages&quot; of multimodal models in a sequential chain.
           </div>
         </div>
         <div className="col-span-1">
