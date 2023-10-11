@@ -207,7 +207,7 @@ export default function DataDictionary() {
                         <tr>
                           <td className="px-6 py-4 text-sm font-medium text-[#94949c]">org_id</td>
                           <td className="px-6 py-4 text-sm text-[#94949c]">String</td>
-                          <td className="px-6 py-4 text-sm text-[#94949c]">The unique identifier for the organization, prefixed with "org-".</td>
+                          <td className="px-6 py-4 text-sm text-[#94949c]">The unique identifier for the organization, prefixed with &quot;org-&quot;.</td>
                         </tr>
                         <tr>
                           <td className="px-6 py-4 text-sm font-medium text-[#94949c]">metadata</td>
