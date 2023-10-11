@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
 
 import Sidebar from "@/components/sidebar";
 import Header from '@/components/header';
@@ -8,8 +7,7 @@ import Header from '@/components/header';
 import Welcome from "@/components/docs/welcome";
 
 
-export default function Home() {
-  const router = useRouter();
+export default function Page() {
 
   return (
     <>
