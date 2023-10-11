@@ -7,9 +7,9 @@ export default function DashboardQuickstart() {
 
   return (
     <>
-      <div className="col-span-3 overflow-y-auto">
+      <div className="col-span-4 md:col-span-3 overflow-y-auto">
         <div className="grid grid-cols-4 p-10">
-          <div className="col-span-3">
+          <div className="col-span-4 md:col-span-3">
             <div className="text-4xl font-extrabold mb-3">
               Dashboard Quickstart
             </div>

@@ -4,9 +4,9 @@ export default function Welcome() {
 
   return (
     <>
-      <div className="col-span-3 overflow-y-auto">
+      <div className="col-span-4 md:col-span-3 overflow-y-auto">
         <div className="grid grid-cols-4 p-10">
-          <div className="col-span-3">
+          <div className="col-span-4 md:col-span-3">
             <div className="text-4xl font-extrabold mb-3">
               NUX
             </div>
@@ -26,10 +26,7 @@ export default function Welcome() {
                 <li><a className="text-sky-600" href="https://github.com/nux-ai/dash">Dashboard:</a> UI interface that provides a visual interaction layer with the API.</li>
               </ul>
             </div>
-
-
           </div>
-
 
           {/* <div className="col-span-1">
           <div>On this page</div>

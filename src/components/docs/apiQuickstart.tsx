@@ -7,9 +7,9 @@ export default function APIQuickstart() {
 
   return (
     <>
-      <div className="col-span-3 overflow-y-auto">
+      <div className="col-span-4 md:col-span-3 overflow-y-auto">
         <div className="grid grid-cols-4 p-10">
-          <div className="col-span-3">
+          <div className="col-span-4 md:col-span-3">
             <div className="text-4xl font-extrabold mb-3">
               API Quickstart
             </div>
@@ -25,7 +25,7 @@ export default function APIQuickstart() {
             </div>
 
             <div className="text-2xl font-extrabold mb-3 mt-12">
-              Step 1: Install Required Python Packages
+              Step 1: Clone repository and install required Python Packages
             </div>
             <div className="text-[#94949c]">
               Navigate to the project directory and install the required Python packages using pip (using a virtual environment is recommended):
@@ -35,7 +35,8 @@ export default function APIQuickstart() {
                 language="bash"
                 style={a11yDark}
               >
-                {`$ cd api
+                {`$ git clone https://github.com/nux-ai/api.git
+$ cd api
 $ pip install -r requirements.txt`}
               </SyntaxHighlighter>
             </div>
