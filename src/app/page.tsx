@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
@@ -12,10 +14,21 @@ import DataDictionary from "@/components/docs/dataDictionary";
 
 
 export default function Home() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const docName = searchParams.get("doc");
   const [selectedDoc, setSelectedDoc] = useState<string>("welcome");
 
+  useEffect(() => {
+    if (docName && docName !== "") {
+      setSelectedDoc(docName);
+    }
+
+  }, [docName]);
+
   const onDocClick = (doc: string) => {
-    setSelectedDoc(doc);
+    router.push(`?doc=${doc}`);
   }
 
   return (
