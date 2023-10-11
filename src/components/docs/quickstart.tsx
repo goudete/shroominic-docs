@@ -43,7 +43,7 @@ $ pip install -r requirements.txt`}
             Step 2: Install MongoDB
           </div>
           <div className="text-[#94949c]">
-            This project requires MongoDB. If you don`&apos;`t have MongoDB installed, you can download it from <a className="text-sky-600" href="https://www.mongodb.com/try/download/community">here</a>.
+            This project requires MongoDB. If you don&apos;t have MongoDB installed, you can download it from <a className="text-sky-600" href="https://www.mongodb.com/try/download/community">here</a>.
           </div>
 
           <div className="text-2xl font-extrabold mb-3 mt-12">
