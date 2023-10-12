@@ -29,7 +29,7 @@ export default function DashboardQuickstart() {
             </div>
             <div>
               <SyntaxHighlighter language="bash" style={a11yDark}>
-                {`$ git clone https://github.com/nux-ai/dash.git`}
+                {`git clone https://github.com/nux-ai/dash.git`}
               </SyntaxHighlighter>
             </div>
 
@@ -38,19 +38,11 @@ export default function DashboardQuickstart() {
             </div>
             <div>
               <SyntaxHighlighter language="bash" style={a11yDark}>
-                {`$ cd dash/
-$ npm i
-$ npm run dev`}
+                {`cd dash/
+npm i
+npm run dev`}
               </SyntaxHighlighter>
             </div>
-
-            <div className="text-4xl font-extrabold mb-3 mt-16">
-              Key Concepts
-            </div>
-            <div className="text-[#94949c]">
-              This repo uses <a className="text-sky-600" href="https://nextjs.org/docs/pages">Next pages router</a>. To add a new route, create a file under the pages directory. The name of the file will be the name of the route.
-            </div>
-
 
           </div>
           {/* <div className="col-span-1">

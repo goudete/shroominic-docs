@@ -171,7 +171,7 @@ export default function DataDictionary() {
             </Card>
 
             <div className="text-3xl font-extrabold mb-3 mt-20">
-              User (within Organization)
+              User
             </div>
             <Card>
               <div className="flex flex-col">

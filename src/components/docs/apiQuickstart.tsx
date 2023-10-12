@@ -18,6 +18,54 @@ export default function APIQuickstart() {
             </div>
 
             <div className="text-4xl font-extrabold mb-3 mt-16">
+              Dependencies
+            </div>
+            <div className="">
+              <SyntaxHighlighter
+                language="text"
+                style={a11yDark}
+              >
+                {`Werkzeug==2.0.2
+Flask==2.0.2
+requests==2.28.2
+sentence_transformers==2.2.2
+jsonschema==3.2.0
+tiktoken==0.3.3
+tqdm==4.65.0
+tika==1.24
+numpy==1.23.2
+chardet==4.0.0
+pymongo==4.0
+beautifulsoup4==4.12.2
+flask_socketio==5.3.6
+langchain==0.0.283
+Pillow==10.0.0
+pydub==0.25.1
+PyPDF2==3.0.1
+pytesseract==0.3.10
+secrets==1.0.2
+selenium==4.12.0
+sentry_sdk==1.30.0
+whisper==1.1.10
+`
+}
+              </SyntaxHighlighter>
+            </div>
+            <div className="text-2xl font-extrabold mb-3 mt-16">
+              Supported Python Version
+            </div>
+            <div className="">
+              <SyntaxHighlighter
+                language="text"
+                style={a11yDark}
+              >
+                {`python3.10`
+}
+              </SyntaxHighlighter>
+            </div>
+
+
+            <div className="text-4xl font-extrabold mb-3 mt-16">
               Installation
             </div>
             <div className="text-[#94949c]">
@@ -28,16 +76,27 @@ export default function APIQuickstart() {
               Step 1: Clone repository and install required Python Packages
             </div>
             <div className="text-[#94949c]">
-              Navigate to the project directory and install the required Python packages using pip (using a virtual environment is recommended):
+              Clone the repository, navigate to the project directory and create a virtual environment:
             </div>
             <div className="">
               <SyntaxHighlighter
                 language="bash"
                 style={a11yDark}
               >
-                {`$ git clone https://github.com/nux-ai/api.git
-$ cd api
-$ pip install -r requirements.txt`}
+                {`git clone https://github.com/nux-ai/api.git
+cd api
+python -m venv venv`}
+              </SyntaxHighlighter>
+            </div>
+            <div className="text-[#94949c] mt-3">
+              Install the required Python packages using pip:
+            </div>
+            <div className="">
+              <SyntaxHighlighter
+                language="bash"
+                style={a11yDark}
+              >
+                {`pip install -r requirements.txt`}
               </SyntaxHighlighter>
             </div>
 
@@ -90,7 +149,7 @@ atlas_credentials = {
             </div>
             <div className="">
               <SyntaxHighlighter language="bash" style={a11yDark}>
-                {`$ python manage.py`}
+                {`python manage.py`}
               </SyntaxHighlighter>
             </div>
             <div className="text-[#94949c]">

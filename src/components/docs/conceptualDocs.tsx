@@ -70,51 +70,6 @@ export default function ConceptualDocs() {
               </ul>
             </div>
 
-            <div className="text-3xl font-extrabold mb-3 mt-16">
-              MongoDB Integration
-            </div>
-            <div className="text-[#94949c]">
-              The code integrates with a MongoDB database in the following ways:
-            </div>
-            <div className="text-xl font-extrabold mb-3 mt-10">
-              Key integrations
-            </div>
-            <div className="text-[#94949c]">
-              <ul className="list-disc ml-4">
-                <li><span className="text-white">PyMongo Usage:</span> Uses PyMongo to connect to a MongoDB cluster and access collections like `organizations`, `sources` etc.</li>
-                <li><span className="text-white">Document Storage:</span> Stores documents in MongoDB collections to persist entities like sources, chains, orgs etc.</li>
-                <li><span className="text-white">Search Capabilities:</span> Uses MongoDB text search and vector similarity search for capabilities like search.</li>
-                <li><span className="text-white">Atlas Search Indexes:</span> Can create Atlas Search indexes on embedding vectors to enable semantic search.</li>
-                <li><span className="text-white">Aggregations in Chains:</span> Uses MongoDB aggregations in chain execution to implement multi-stage pipelines.</li>
-              </ul>
-            </div>
-            <div className="text-[#94949c] mt-4">
-              So MongoDB serves as the primary data store and execution engine for core capabilities.
-            </div>
-
-            <div className="text-3xl font-extrabold mb-3 mt-16">
-              Supported ML Models
-            </div>
-            <div className="text-[#94949c]">
-              The system currently supports the following ML models:
-            </div>
-            <div className="text-xl font-extrabold mb-3 mt-10">
-              Model list
-            </div>
-            <div className="text-[#94949c]">
-              <ul className="list-disc ml-4">
-                <li><span className="text-white">SentenceTransformers:</span> For generating semantic text embeddings used in search.</li>
-                <li><span className="text-white">OpenAI Whisper:</span> Speech to text transcription of audio.</li>
-                <li><span className="text-white">OpenAI ChatGPT:</span> Text generation and summarization.</li>
-                <li><span className="text-white">ElevenLabs:</span> Text to speech synthesis.</li>
-              </ul>
-            </div>
-            <div className="text-[#94949c] mt-4">
-              Additional models can be added by extending the relevant classes like `TextToText` or `FileEmbedder`.
-            </div>
-
-
-
           </div>
           {/* <div className="col-span-1">
           <div>On this page</div>

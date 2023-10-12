@@ -59,6 +59,12 @@ export default function Sidebar() {
           >
             Conceptual Docs
           </div>
+        </div>
+
+        <div className="">
+          <div className="text-lg font-medium pl-3 mt-12">
+            Models
+          </div>
           <div
             onClick={() => router.push("/data-dictionary")}
             className={`text-[#94949c] ${pathName === "/data-dictionary" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
@@ -66,6 +72,8 @@ export default function Sidebar() {
             Data Dictionary
           </div>
         </div>
+
+
       </div>
       {isOpen && <div className="fixed inset-0 bg-black opacity-95" onClick={() => setIsOpen(false)}></div>}
     </>
