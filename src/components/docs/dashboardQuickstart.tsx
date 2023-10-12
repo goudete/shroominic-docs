@@ -1,6 +1,7 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import CodeBlockWithCopy from '../codeBlockWithCopy';
 
 
 export default function DashboardQuickstart() {
@@ -27,22 +28,20 @@ export default function DashboardQuickstart() {
             <div className="text-2xl font-extrabold mb-3 mt-12">
               Step 1: Clone the repository
             </div>
-            <div>
-              <SyntaxHighlighter language="bash" style={a11yDark}>
-                {`git clone https://github.com/nux-ai/dash.git`}
-              </SyntaxHighlighter>
-            </div>
+            <CodeBlockWithCopy
+              codeContent={`git clone https://github.com/nux-ai/dash.git`}
+              language='bash'
+            />
 
             <div className="text-2xl font-extrabold mb-3 mt-12">
               Step 2: Install dependencies and run the server
             </div>
-            <div>
-              <SyntaxHighlighter language="bash" style={a11yDark}>
-                {`cd dash/
+            <CodeBlockWithCopy
+              codeContent={`cd dash/
 npm i
 npm run dev`}
-              </SyntaxHighlighter>
-            </div>
+              language='bash'
+            />
 
           </div>
           {/* <div className="col-span-1">

@@ -1,31 +1,9 @@
 import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
+import CodeBlockWithCopy from '../codeBlockWithCopy';
 
 export default function APIQuickstart() {
 
-  return (
-    <>
-      <div className="col-span-4 md:col-span-3 overflow-y-auto">
-        <div className="grid grid-cols-4 p-10">
-          <div className="col-span-4 md:col-span-3">
-            <div className="text-4xl font-extrabold mb-3">
-              API Quickstart
-            </div>
-            <div className="text-[#94949c]">
-              Get up and running with the NUX API in 5 minutes.
-            </div>
-
-            <div className="text-4xl font-extrabold mb-3 mt-16">
-              Dependencies
-            </div>
-            <div className="">
-              <SyntaxHighlighter
-                language="text"
-                style={a11yDark}
-              >
-                {`Werkzeug==2.0.2
+  const dependenciesText = `Werkzeug==2.0.2
 Flask==2.0.2
 requests==2.28.2
 sentence_transformers==2.2.2
@@ -47,23 +25,50 @@ secrets==1.0.2
 selenium==4.12.0
 sentry_sdk==1.30.0
 whisper==1.1.10
-`
+`;
+
+  const configText = `openai_key = 'your_openai_key' 
+eleven_labs_key = 'your_eleven_labs_key'
+mixpeek_aws_creds = {
+  "s3_bucket": "your_s3_bucket_name",
+  "aws_access_key": "your_aws_access_key_id",
+  "aws_secret_key": "your_aws_secret_access_key",
+  "region": "us-east-2",
 }
-              </SyntaxHighlighter>
+mongo_url = 'your_mongodb_url' # MongoDB URL and Atlas credentials for connecting to a specific MongoDB cluster
+atlas_credentials = {
+  'group_id': 'your_group_id',
+  'cluster_name': 'your_cluster_name',
+  'public_key': 'your_public_key',
+  'private_key': 'your_private_key'
+}`;
+
+  return (
+    <>
+      <div className="col-span-4 md:col-span-3 overflow-y-auto">
+        <div className="grid grid-cols-4 p-10">
+          <div className="col-span-4 md:col-span-3">
+            <div className="text-4xl font-extrabold mb-3">
+              API Quickstart
             </div>
+            <div className="text-[#94949c]">
+              Get up and running with the NUX API in 5 minutes.
+            </div>
+
+            <div className="text-4xl font-extrabold mb-3 mt-16">
+              Dependencies
+            </div>
+            <CodeBlockWithCopy
+              codeContent={dependenciesText}
+              language='text'
+            />
             <div className="text-2xl font-extrabold mb-3 mt-16">
               Supported Python Version
             </div>
-            <div className="">
-              <SyntaxHighlighter
-                language="text"
-                style={a11yDark}
-              >
-                {`python3.10`
-}
-              </SyntaxHighlighter>
-            </div>
-
+            <CodeBlockWithCopy
+              codeContent={`python 3.10`}
+              language='text'
+            />
 
             <div className="text-4xl font-extrabold mb-3 mt-16">
               Installation
@@ -78,28 +83,19 @@ whisper==1.1.10
             <div className="text-[#94949c]">
               Clone the repository, navigate to the project directory and create a virtual environment:
             </div>
-            <div className="">
-              <SyntaxHighlighter
-                language="bash"
-                style={a11yDark}
-              >
-                {`git clone https://github.com/nux-ai/api.git
+            <CodeBlockWithCopy
+              codeContent={`git clone https://github.com/nux-ai/api.git
 cd api
 python -m venv venv`}
-              </SyntaxHighlighter>
-            </div>
+              language='bash'
+            />
             <div className="text-[#94949c] mt-3">
               Install the required Python packages using pip:
             </div>
-            <div className="">
-              <SyntaxHighlighter
-                language="bash"
-                style={a11yDark}
-              >
-                {`pip install -r requirements.txt`}
-              </SyntaxHighlighter>
-            </div>
-
+            <CodeBlockWithCopy
+              codeContent={`pip install -r requirements.txt`}
+              language='bash'
+            />
             <div className="text-2xl font-extrabold mb-3 mt-12">
               Step 2: Install MongoDB
             </div>
@@ -120,26 +116,10 @@ python -m venv venv`}
             <div className="text-[#94949c]">
               Ensure that the `config.py` file in the root directory of the project contains the following:
             </div>
-            <div className="">
-              <SyntaxHighlighter language="python" style={a11yDark}>
-                {`openai_key = 'your_openai_key' 
-eleven_labs_key = 'your_eleven_labs_key'
-mixpeek_aws_creds = {
-  "s3_bucket": "your_s3_bucket_name",
-  "aws_access_key": "your_aws_access_key_id",
-  "aws_secret_key": "your_aws_secret_access_key",
-  "region": "us-east-2",
-}
-mongo_url = 'your_mongodb_url' # MongoDB URL and Atlas credentials for connecting to a specific MongoDB cluster
-atlas_credentials = {
-  'group_id': 'your_group_id',
-  'cluster_name': 'your_cluster_name',
-  'public_key': 'your_public_key',
-  'private_key': 'your_private_key'
-}
-              `}
-              </SyntaxHighlighter>
-            </div>
+            <CodeBlockWithCopy
+              codeContent={configText}
+              language='python'
+            />
 
             <div className="text-2xl font-extrabold mb-3 mt-12">
               Step 5: Run the Application
@@ -147,11 +127,10 @@ atlas_credentials = {
             <div className="text-[#94949c]">
               Finally, you can run the Flask application using the following command:
             </div>
-            <div className="">
-              <SyntaxHighlighter language="bash" style={a11yDark}>
-                {`python manage.py`}
-              </SyntaxHighlighter>
-            </div>
+            <CodeBlockWithCopy
+              codeContent={`python manage.py`}
+              language='bash'
+            />
             <div className="text-[#94949c]">
               This will start up the Flask app with the API routes defined in the `Controllers` module.
             </div>
