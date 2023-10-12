@@ -15,7 +15,7 @@ export default function SystemOverview() {
               Functionality
             </div>
             <div className="text-[#94949c]">
-              This codebase implements a backend API for Nux's platform to chain together AI workflows. It provides endpoints for:
+              This codebase implements a backend API for Nux&apos;s platform to chain together AI workflows. It provides endpoints for:
             </div>
             <div className="text-[#94949c]">
               <ul className="list-disc ml-4">
