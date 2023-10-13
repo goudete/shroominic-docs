@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 
 export default function ConceptualDocs() {
 
@@ -29,6 +30,10 @@ export default function ConceptualDocs() {
                 <li><span className="text-white">Execution Context:</span> The execution context contains data passed from one stage to the next. It allows stages to share information.</li>
                 <li><span className="text-white">User Payload:</span> Optional input passed by the user when invoking the chain. Can override stage configurations.</li>
               </ul>
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <Image width={250} height={500} src={"/chain-diagram.png"} alt="chain diagram" />
             </div>
 
             <div className="text-3xl font-extrabold mb-3 mt-16">
