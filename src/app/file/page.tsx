@@ -6,21 +6,35 @@ import Sidebar from "@/components/sidebar";
 import Header from '@/components/header';
 
 
+export default function Page() {
 
-export default function Home() {
-  
-  const markdownContent = `# Welcome
-This project provides a LangChain implementation of the ChatGPT Code Interpreter. It allows you to have a back and forth chat with the AI assistant to get it to help with programming tasks, data analysis, and more. You can run everything local except the LLM using your own OpenAI API Key.
+  const markdownContent = `# File
+The File class is used to represent files that are uploaded or downloaded during the session. 
 
-Some key features:
+It stores the filename and binary content of the file.
 
-- Sandboxed execution of Python code snippets provided by the AI assistant using CodeBox. CodeBox is the simplest cloud infrastructure for your LLM Apps.
-- Automatic handling of file uploads/downloads 
-- Support for stateful conversations with chat history
-- Extensible architecture to add custom tools and logic
+It provides utility methods like:
+
+- \`from_path()\`: Create File from filesystem path
+- \`from_url\` - Create File from URL
+- \`save()\`: Save File to filesystem path
+- \`show_image()\`: Display image File
+
+Usage:
+
+\`\`\`python
+from codeinterpreterapi import File
+
+file = File.from_path("image.png")
+file.show_image() # display image
+file.save("copy.png") # save copy
+\`\`\`
+
+File objects can be passed to \`CodeInterpreterSession.generate_response\` to make them available to the agent.
   `;
 
   const parsedContent = marked.parse(markdownContent);
+
   return (
     <>
       <div className="flex flex-col justify-between h-screen">

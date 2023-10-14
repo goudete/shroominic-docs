@@ -30,49 +30,96 @@ export default function Sidebar() {
             Welcome
           </div>
           <div
-            onClick={() => router.push("/api-quickstart")}
-            className={`text-[#94949c] ${pathName === "/api-quickstart" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+            onClick={() => router.push("/installation")}
+            className={`text-[#94949c] ${pathName === "/installation" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
           >
-            API Quickstart
+            Installation
           </div>
           <div
-            onClick={() => router.push("/dashboard-quickstart")}
-            className={`text-[#94949c] ${pathName === "/dashboard-quickstart" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+            onClick={() => router.push("/usage")}
+            className={`text-[#94949c] ${pathName === "/usage" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
           >
-            Dashboard Quickstart
+            Usage
           </div>
         </div>
 
         <div className="">
           <div className="text-lg font-medium pl-3 mt-12">
-            Walkthrough
+            Code Interpreter Concepts
           </div>
           <div
-            onClick={() => router.push("/system-overview")}
-            className={`text-[#94949c] ${pathName === "/system-overview" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+            onClick={() => router.push("/concepts-overview")}
+            className={`text-[#94949c] ${pathName === "/concepts-overview" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
           >
-            System Overview
+            Concepts Overview
           </div>
           <div
-            onClick={() => router.push("/conceptual-docs")}
-            className={`text-[#94949c] ${pathName === "/conceptual-docs" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+            onClick={() => router.push("/code-interpreter-session")}
+            className={`text-[#94949c] ${pathName === "/code-interpreter-session" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
           >
-            Conceptual Docs
+            CodeInterpreterSession
+          </div>
+          <div
+            onClick={() => router.push("/codebox")}
+            className={`text-[#94949c] ${pathName === "/codebox" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+          >
+            CodeBox
+          </div>
+          <div
+            onClick={() => router.push("/file")}
+            className={`text-[#94949c] ${pathName === "/file" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+          >
+            File
+          </div>
+          <div
+            onClick={() => router.push("/user-request")}
+            className={`text-[#94949c] ${pathName === "/user-request" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+          >
+            UserRequest
+          </div>
+          <div
+            onClick={() => router.push("/code-interpreter-response")}
+            className={`text-[#94949c] ${pathName === "/code-interpreter-response" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+          >
+            CodeInterpreterResponse
           </div>
         </div>
 
         <div className="">
           <div className="text-lg font-medium pl-3 mt-12">
-            Models
+            Deployment
           </div>
           <div
-            onClick={() => router.push("/data-dictionary")}
-            className={`text-[#94949c] ${pathName === "/data-dictionary" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+            onClick={() => router.push("/deploy")}
+            className={`text-[#94949c] ${pathName === "/deploy" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
           >
-            Data Dictionary
+            Deploy
           </div>
         </div>
 
+        <div className="">
+          <div className="text-lg font-medium pl-3 mt-12">
+            Examples
+          </div>
+          <div
+            onClick={() => router.push("/bitcoin-chart")}
+            className={`text-[#94949c] ${pathName === "/bitcoin-chart" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+          >
+            Bitcoin Chart
+          </div>
+          <div
+            onClick={() => router.push("/iris-dataset")}
+            className={`text-[#94949c] ${pathName === "/iris-dataset" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+          >
+            Iris Dataset
+          </div>
+          <div
+            onClick={() => router.push("/streamlit-webapp")}
+            className={`text-[#94949c] ${pathName === "/streamlit-webapp" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
+          >
+            Steramlit Webapp
+          </div>
+        </div>
 
       </div>
       {isOpen && <div className="fixed inset-0 bg-black opacity-95" onClick={() => setIsOpen(false)}></div>}

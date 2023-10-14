@@ -6,21 +6,36 @@ import Sidebar from "@/components/sidebar";
 import Header from '@/components/header';
 
 
+export default function Page() {
 
-export default function Home() {
-  
-  const markdownContent = `# Welcome
-This project provides a LangChain implementation of the ChatGPT Code Interpreter. It allows you to have a back and forth chat with the AI assistant to get it to help with programming tasks, data analysis, and more. You can run everything local except the LLM using your own OpenAI API Key.
+  const markdownContent = `# CodeBox
+The CodeBox class provides the isolated secure environment for executing python code. It is used by the CodeInterpreterSession internally.
 
-Some key features:
+It provides methods like:
 
-- Sandboxed execution of Python code snippets provided by the AI assistant using CodeBox. CodeBox is the simplest cloud infrastructure for your LLM Apps.
-- Automatic handling of file uploads/downloads 
-- Support for stateful conversations with chat history
-- Extensible architecture to add custom tools and logic
+- \`upload() / download()\`: Upload and download files
+- \`run()\`: Run python code
+- \`install()\`: Install python packages
+
+The CodeBox handles setting up the environment, installing packages, running code, capturing output and making it available.
+
+It uses Docker containers under the hood to provide the isolated env.
+
+Usage:
+
+\`\`\`python
+from codeboxapi import CodeBox
+
+codebox = CodeBox()
+codebox.upload("data.csv", b"1,2,3\
+4,5,6") 
+output = codebox.run("import pandas as pd; df = pd.read_csv('data.csv')")
+print(output.content)
+\`\`\`
   `;
 
   const parsedContent = marked.parse(markdownContent);
+
   return (
     <>
       <div className="flex flex-col justify-between h-screen">

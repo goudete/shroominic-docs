@@ -6,21 +6,20 @@ import Sidebar from "@/components/sidebar";
 import Header from '@/components/header';
 
 
+export default function Page() {
 
-export default function Home() {
-  
-  const markdownContent = `# Welcome
-This project provides a LangChain implementation of the ChatGPT Code Interpreter. It allows you to have a back and forth chat with the AI assistant to get it to help with programming tasks, data analysis, and more. You can run everything local except the LLM using your own OpenAI API Key.
+  const markdownContent = `# CodeInterpreterResponse
+The CodeInterpreterResponse contains the AI agent's response.
 
-Some key features:
+It contains:
 
-- Sandboxed execution of Python code snippets provided by the AI assistant using CodeBox. CodeBox is the simplest cloud infrastructure for your LLM Apps.
-- Automatic handling of file uploads/downloads 
-- Support for stateful conversations with chat history
-- Extensible architecture to add custom tools and logic
+- \`content\`: text response content
+- \`files\`: list of generated File attachments 
+- \`code_log\`: log of executed code snippets
   `;
 
   const parsedContent = marked.parse(markdownContent);
+
   return (
     <>
       <div className="flex flex-col justify-between h-screen">
