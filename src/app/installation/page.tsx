@@ -1,6 +1,19 @@
 "use client";
 
-import { marked } from 'marked';
+import { Marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from 'highlight.js';
+import 'highlight.js/styles/monokai.css';
+
+const marked = new Marked(
+  markedHighlight({
+    langPrefix: 'hljs language-',
+    highlight(code, lang) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    }
+  })
+);
 
 import Sidebar from "@/components/sidebar";
 import Header from '@/components/header';
@@ -13,14 +26,14 @@ export default function Page() {
 
 To install, it's recommended to create a virtual environment (using \`venv\` in the example below):
 
-\`\`\`
+\`\`\`bash
 python3 -m venv codeinterpreterenv
 source codeinterpreterenv/bin/activate
 \`\`\`
 
 Then install the package:
 
-\`\`\`
+\`\`\`bash
 pip install "codeinterpreterapi[all]"
 \`\`\`
 
@@ -33,7 +46,7 @@ You will also need to configure API keys for the AI model you want to use, eithe
 
 For OpenAI, create a \`.env\` file with:
 
-\`\`\`
+\`\`\`bash
 OPENAI_API_KEY=sk-...
 \`\`\`
 or export as an environment variable in your terminal:
@@ -44,7 +57,7 @@ export OPENAI_API_KEY=your_openai_api_key
 
 For Azure, use:
 
-\`\`\`
+\`\`\`bash
 OPENAI_API_TYPE=azure
 OPENAI_API_VERSION=2023-07-01-preview
 OPENAI_API_BASE=
@@ -54,6 +67,7 @@ DEPLOYMENT_NAME=
 `;
 
   const parsedContent = marked.parse(markdownContent);
+
 
   return (
     <>

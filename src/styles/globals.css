@@ -17,3 +17,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* This targets the code block itself */
+.hljs {
+  border-radius: 8px;
+}
