@@ -117,7 +117,7 @@ export default function Sidebar() {
             onClick={() => router.push("/streamlit-webapp")}
             className={`text-[#94949c] ${pathName === "/streamlit-webapp" ? `bg-[#141E2A] !text-[#4090DA] font-medium` : ``} hover:cursor-pointer hover:bg-[#141E2A] rounded py-2 pl-3`}
           >
-            Steramlit Webapp
+            Streamlit Webapp
           </div>
         </div>
 
